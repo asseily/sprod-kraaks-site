@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "sprod-astro",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "Projects/SprodGMG/website", "run", "dev"],
+      "port": 4322
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "stitch": {
+      "type": "stdio",
+      "command": "sh",
+      "args": [
+        "-c",
+        "set -a; [ -f .env ] && . ./.env; set +a; exec npx @_davideast/stitch-mcp proxy"
+      ],
+      "env": {}
+    }
+  }
+}

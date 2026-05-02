@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sprod-Kraaks | Big flavor. Quietly made.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "on-secondary-fixed": "#1e1b18",
+                            "tertiary-fixed-dim": "#bdce89",
+                            "surface-bright": "#fff8f4",
+                            "on-tertiary-container": "#fbffe4",
+                            "surface": "#fff8f4",
+                            "on-tertiary-fixed-variant": "#3e4c16",
+                            "secondary-fixed": "#e9e1dc",
+                            "on-secondary": "#ffffff",
+                            "surface-dim": "#e3d8d1",
+                            "on-background": "#201b16",
+                            "on-secondary-fixed-variant": "#4b4642",
+                            "secondary-container": "#e6ded9",
+                            "surface-container-highest": "#ebe1d9",
+                            "inverse-primary": "#f6bb7c",
+                            "surface-variant": "#ebe1d9",
+                            "primary-fixed-dim": "#f6bb7c",
+                            "on-error": "#ffffff",
+                            "tertiary-container": "#6b7b3f",
+                            "surface-container-lowest": "#ffffff",
+                            "outline-variant": "#d5c4b5",
+                            "primary-container": "#9b6a34",
+                            "surface-container": "#f7ece4",
+                            "primary": "#7e521e",
+                            "inverse-on-surface": "#faefe7",
+                            "on-primary-fixed-variant": "#663e09",
+                            "tertiary": "#536229",
+                            "background": "#fff8f4",
+                            "surface-container-high": "#f1e6df",
+                            "primary-fixed": "#ffdcbc",
+                            "on-error-container": "#93000a",
+                            "on-primary-fixed": "#2c1700",
+                            "on-primary": "#ffffff",
+                            "on-secondary-container": "#67625e",
+                            "on-tertiary": "#ffffff",
+                            "secondary-fixed-dim": "#cdc5c0",
+                            "on-surface-variant": "#50453a",
+                            "tertiary-fixed": "#d9eaa3",
+                            "inverse-surface": "#352f2a",
+                            "secondary": "#635d5a",
+                            "on-surface": "#201b16",
+                            "error-container": "#ffdad6",
+                            "on-primary-container": "#fffbff",
+                            "outline": "#837568",
+                            "on-tertiary-fixed": "#161f00",
+                            "surface-tint": "#815520",
+                            "surface-container-low": "#fdf2ea",
+                            "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "margin": "64px",
+                            "section-gap": "128px",
+                            "gutter": "32px",
+                            "unit": "4px",
+                            "container-max-width": "1280px"
+                    },
+                    "fontFamily": {
+                            "display-lg": [
+                                    "Newsreader"
+                            ],
+                            "nav-link": [
+                                    "Inter"
+                            ],
+                            "headline-sm": [
+                                    "Newsreader"
+                            ],
+                            "body-lg": [
+                                    "Inter"
+                            ],
+                            "display-md": [
+                                    "Newsreader"
+                            ],
+                            "body-md": [
+                                    "Inter"
+                            ],
+                            "label-caps": [
+                                    "Inter"
+                            ]
+                    },
+                    "fontSize": {
+                            "display-lg": [
+                                    "96px",
+                                    {
+                                            "lineHeight": "100px",
+                                            "letterSpacing": "-0.02em",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "nav-link": [
+                                    "14px",
+                                    {
+                                            "lineHeight": "20px",
+                                            "fontWeight": "500"
+                                    }
+                            ],
+                            "headline-sm": [
+                                    "32px",
+                                    {
+                                            "lineHeight": "40px",
+                                            "fontWeight": "500"
+                                    }
+                            ],
+                            "body-lg": [
+                                    "18px",
+                                    {
+                                            "lineHeight": "32px",
+                                            "letterSpacing": "0.01em",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "display-md": [
+                                    "48px",
+                                    {
+                                            "lineHeight": "56px",
+                                            "letterSpacing": "-0.01em",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "body-md": [
+                                    "16px",
+                                    {
+                                            "lineHeight": "28px",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "label-caps": [
+                                    "12px",
+                                    {
+                                            "lineHeight": "16px",
+                                            "letterSpacing": "0.1em",
+                                            "fontWeight": "600"
+                                    }
+                            ]
+                    }
+            },
+                },
+            }
+    </script>
+<style>
+        /* Editorial & Minimalism Overrides */
+        body {
+            background-color: #FDFCF8;
+            color: #2D2926;
+            -webkit-font-smoothing: antialiased;
+        }
+        .text-copper { color: #A8763E; }
+        .bg-copper { background-color: #A8763E; }
+        .border-copper { border-color: #A8763E; }
+        .text-espresso { color: #2D2926; }
+        .bg-espresso { background-color: #2D2926; }
+        .border-espresso { border-color: #2D2926; }
+        
+        .hairline-b { border-bottom: 1px solid rgba(45, 41, 38, 0.15); }
+        .hairline-t { border-top: 1px solid rgba(45, 41, 38, 0.15); }
+        .hairline-r { border-right: 1px solid rgba(45, 41, 38, 0.15); }
+        .hairline-l { border-left: 1px solid rgba(45, 41, 38, 0.15); }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 border-b border-[#2D2926]/10 dark:border-stone-100/10 bg-[#FDFCF8]/90 backdrop-blur-sm transition-colors duration-300">
+<div class="flex justify-between items-center w-full px-12 h-20">
+<!-- Brand -->
+<div class="flex-shrink-0">
+<div class="border border-[#2D2926] px-4 py-2 text-lg font-bold tracking-tighter uppercase text-espresso">
+                    Sprod-Kraaks
+                </div>
+</div>
+<!-- Nav Links -->
+<nav class="hidden md:flex space-x-8">
+<a class="text-[#A8763E] border-b border-[#A8763E] pb-1 font-['Newsreader'] uppercase tracking-[0.2em] text-[11px] hover:text-[#A8763E] transition-colors duration-300" href="#">Home</a>
+<a class="text-[#2D2926] font-['Newsreader'] uppercase tracking-[0.2em] text-[11px] hover:text-[#A8763E] transition-colors duration-300" href="#">Shop</a>
+<a class="text-[#2D2926] font-['Newsreader'] uppercase tracking-[0.2em] text-[11px] hover:text-[#A8763E] transition-colors duration-300" href="#">Story</a>
+<a class="text-[#2D2926] font-['Newsreader'] uppercase tracking-[0.2em] text-[11px] hover:text-[#A8763E] transition-colors duration-300" href="#">Stockists</a>
+<a class="text-[#2D2926] font-['Newsreader'] uppercase tracking-[0.2em] text-[11px] hover:text-[#A8763E] transition-colors duration-300" href="#">Journal</a>
+</nav>
+<!-- Trailing Actions -->
+<div class="flex items-center space-x-6 text-espresso">
+<button class="hover:text-[#A8763E] transition-colors duration-300 flex items-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">language</span>
+</button>
+<button class="hover:text-[#A8763E] transition-colors duration-300 flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_basket</span>
+<span class="font-label-caps text-label-caps">0</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="h-[921px] flex flex-col md:flex-row hairline-b">
+<div class="w-full md:w-2/3 h-1/2 md:h-full bg-surface-variant relative overflow-hidden">
+<img alt="Cracker snapped on linen" class="absolute inset-0 w-full h-full object-cover" data-alt="A high-end, editorial close-up of a rustic, artisanal cracker snapped in half, resting on heavily textured, natural linen fabric. The scene is lit by a single warm, diffused light source, casting soft, elongated shadows that emphasize the irregular, hand-crafted texture of the cracker. The color palette is strictly warm, desaturated neutral tones of cream, tan, and faint espresso, embodying a quiet luxury and minimalist culinary aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz2oWx-_aWyw-UiVURXZujpvK4V56aBWcgQAWYW1T_i9GJd-jcogjRR0GDv1rra5vRyxNSFI59g-lpqJpsFoXWMO-tRTKm8BWZBw8bibFz1u1QFzciyUkx4vPpQt496fHSvaLTBYuAp2y6n_9jLTjQuP6v2K8cB-I7Kk3YjkOY7LOnas7Neox1WYQssHLW9L514Hkb_4EXOFrNvzmcPK1ShVF_4WjcBxNjS5kkaR48awpqAMKHtR-NwXt6Tl9Kelfu0Qr4jgP4UKn_"/>
+</div>
+<div class="w-full md:w-1/3 h-1/2 md:h-full bg-[#FDFCF8] flex flex-col justify-center px-12 md:px-margin hairline-l">
+<span class="font-label-caps text-label-caps text-copper uppercase mb-8">CRAFTED IN SMALL BATCHES</span>
+<h1 class="font-display-lg text-display-lg text-espresso mb-12">
+                    Big flavor.<br/>
+<span class="italic text-copper">Quietly made.</span>
+</h1>
+<div>
+<a class="inline-flex items-center text-espresso font-label-caps text-label-caps uppercase hover:text-copper transition-colors pb-1 border-b border-espresso hover:border-copper group" href="#">
+                        Shop the range
+                    </a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full mt-32 border-t border-[#2D2926]/20 bg-[#FDFCF8]">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-24 px-12 py-24 max-w-screen-2xl mx-auto">
+<div>
+<div class="border border-[#2D2926] p-6 text-3xl font-bold uppercase inline-block mb-8 text-espresso">
+                        Sprod-Kraaks
+                    </div>
+<p class="font-['Newsreader'] italic text-xl leading-relaxed text-espresso mb-8">
+                        The craft of the cracker.
+                    </p>
+<div class="flex space-x-4">
+<span class="material-symbols-outlined hover:text-copper cursor-pointer transition-colors">camera_alt</span>
+<span class="material-symbols-outlined hover:text-copper cursor-pointer transition-colors">share</span>
+</div>
+</div>
+<div class="flex flex-col space-y-4 font-nav-link text-nav-link text-stone-500">
+<a class="hover:underline decoration-1 underline-offset-8 transition-all duration-500 hover:text-espresso" href="#">Shop</a>
+<a class="hover:underline decoration-1 underline-offset-8 transition-all duration-500 hover:text-espresso" href="#">Story</a>
+<a class="hover:underline decoration-1 underline-offset-8 transition-all duration-500 hover:text-espresso" href="#">Stockists</a>
+<a class="hover:underline decoration-1 underline-offset-8 transition-all duration-500 hover:text-espresso" href="#">Journal</a>
+<a class="hover:underline decoration-1 underline-offset-8 transition-all duration-500 hover:text-espresso" href="#">Contact</a>
+</div>
+<div class="flex flex-col space-y-4 font-nav-link text-nav-link text-stone-500">
+<p class="text-espresso font-medium mb-2">Direct Contact</p>
+<p>Marwan Cabbabé</p>
+<p>David Asseily Capretti</p>
+<p class="mt-8">hello@sprod-kraaks.com</p>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-[#2D2926]/10 flex flex-col md:flex-row justify-between items-center text-sm text-stone-500 font-nav-link">
+<p>© Sprod-Kraaks. Founders Marwan &amp; David. All rights reserved.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a class="hover:text-espresso transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-espresso transition-colors" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

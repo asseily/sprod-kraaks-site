@@ -1,0 +1,17 @@
+node_modules/
+.pnp/
+.pnp.js
+dist/
+build/
+.next/
+.astro/
+out/
+.env
+.env.local
+.env.*.local
+*.log
+npm-debug.log*
+.vscode/
+.idea/
+.DS_Store
+.stitch-cache/
