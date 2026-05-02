@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const regions = [
+  { region: 'LEBANON', stockists: ['Spinneys (all branches)', 'Carrefour', 'Goodies Beirut', 'TSC', 'Fresh Garden'] },
+  { region: 'UAE', stockists: ['Spinneys Dubai', 'Waitrose Dubai', 'Choithrams', 'Kibsons', 'Organic Foods & Café'] },
+  { region: 'KSA', stockists: ['Tamimi Markets', 'Lulu Hypermarket', 'Danube'] },
+  { region: 'EUROPE', stockists: ['Eco Market (Paris)', 'Gourmini (London)', 'Selected delicatessens — ask us'] },
+];
+---
+
+<Layout title="Stockists — Sprød-Kråaks">
+  <Nav active="stockists" />
+  <main class="w-full max-w-container-max mx-auto px-8 md:px-12 py-32">
+    <header class="flex flex-col gap-y-6 mb-24 max-w-3xl">
+      <span class="font-label text-label-caps uppercase tracking-widest text-copper">FIND US IN THE WILD</span>
+      <h1 class="font-headline text-display-xl italic text-espresso leading-none">Stockists.</h1>
+      <p class="font-body text-body-lg text-cocoa">From Beirut to Dubai to London. We grow slowly, on purpose. If you can't find us nearby — let us know.</p>
+    </header>
+
+    <div class="border-t border-espresso/15"></div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20 mt-24">
+      {regions.map(r => (
+        <div class="flex flex-col gap-y-6">
+          <h2 class="font-label text-label-caps uppercase tracking-widest text-copper">{r.region}</h2>
+          <ul class="flex flex-col gap-y-3 font-headline text-headline-md text-espresso">
+            {r.stockists.map(s => <li class="border-t border-espresso/15 pt-3">{s}</li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-32 max-w-2xl border-t border-espresso/15 pt-16">
+      <h3 class="font-headline text-display-lg italic text-espresso mb-6 leading-tight">Become a stockist.</h3>
+      <p class="font-body text-body-lg text-cocoa mb-8">We work with delicatessens, supermarkets, hotels, and curated grocers across the Middle East and Europe. If your shelf has space for the slow stuff, we'd love to talk.</p>
+      <a href="/contact" class="inline-block px-8 py-4 bg-espresso text-cream font-label text-label-caps uppercase tracking-widest hover:bg-copper transition-colors">Get in touch →</a>
+    </div>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Journal — Sprød-Kråaks">
+  <Nav active="journal" />
+  <main class="w-full max-w-container-max mx-auto px-8 md:px-12 py-32">
+    <header class="flex flex-col gap-y-6 mb-24 max-w-3xl">
+      <span class="font-label text-label-caps uppercase tracking-widest text-copper">DISPATCHES FROM THE BAKERY</span>
+      <h1 class="font-headline text-display-xl italic text-espresso leading-none">The Journal.</h1>
+      <p class="font-body text-body-lg text-cocoa">Pairings. Kitchen notes. Conversations with the people who feed us. One letter at a time.</p>
+    </header>
+
+    <div class="border-t border-espresso/15"></div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 mt-24">
+      <article class="flex flex-col gap-y-4 group">
+        <div class="aspect-[4/3] bg-linen flex items-center justify-center">
+          <span class="font-headline italic text-headline-md text-cocoa/60">Coming soon</span>
+        </div>
+        <span class="font-label text-label-caps uppercase tracking-widest text-copper">PAIRING</span>
+        <h2 class="font-headline text-headline-lg text-espresso group-hover:text-copper transition-colors">Notes on a Burrata board.</h2>
+        <p class="font-body italic text-body-md text-cocoa">Three crackers, one cheese, a quiet afternoon.</p>
+      </article>
+      <article class="flex flex-col gap-y-4 group">
+        <div class="aspect-[4/3] bg-linen flex items-center justify-center">
+          <span class="font-headline italic text-headline-md text-cocoa/60">Coming soon</span>
+        </div>
+        <span class="font-label text-label-caps uppercase tracking-widest text-copper">DISPATCH</span>
+        <h2 class="font-headline text-headline-lg text-espresso group-hover:text-copper transition-colors">Dough memory.</h2>
+        <p class="font-body italic text-body-md text-cocoa">Why our grandmothers' hands knew more than any timer.</p>
+      </article>
+    </div>
+
+    <p class="mt-24 font-body italic text-body-md text-cocoa text-center">
+      The journal opens soon. Until then — <a href="#" class="text-copper underline-offset-4 hover:underline">subscribe to the letter</a>.
+    </p>
+  </main>
+  <Footer />
+</Layout>

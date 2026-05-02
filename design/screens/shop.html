@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SPROD-KRAAKS - Shop</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#ebe1d9",
+                        "secondary": "#635d5a",
+                        "on-secondary-fixed-variant": "#4b4642",
+                        "on-primary-container": "#fffbff",
+                        "on-tertiary-fixed": "#161f00",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#536229",
+                        "inverse-on-surface": "#faefe7",
+                        "on-secondary-container": "#67625e",
+                        "on-tertiary-fixed-variant": "#3e4c16",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#f6bb7c",
+                        "secondary-container": "#e6ded9",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#201b16",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#1e1b18",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fff8f4",
+                        "outline": "#837568",
+                        "inverse-surface": "#352f2a",
+                        "on-background": "#201b16",
+                        "tertiary-container": "#6b7b3f",
+                        "primary-fixed": "#ffdcbc",
+                        "on-primary-fixed": "#2c1700",
+                        "surface-container-low": "#fdf2ea",
+                        "surface-container-high": "#f1e6df",
+                        "surface-tint": "#815520",
+                        "surface-container": "#f7ece4",
+                        "on-tertiary-container": "#fbffe4",
+                        "surface": "#fff8f4",
+                        "secondary-fixed-dim": "#cdc5c0",
+                        "surface-container-highest": "#ebe1d9",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#e3d8d1",
+                        "secondary-fixed": "#e9e1dc",
+                        "primary-fixed-dim": "#f6bb7c",
+                        "primary": "#7e521e",
+                        "on-surface-variant": "#50453a",
+                        "outline-variant": "#d5c4b5",
+                        "tertiary-fixed-dim": "#bdce89",
+                        "primary-container": "#9b6a34",
+                        "tertiary-fixed": "#d9eaa3",
+                        "surface-bright": "#fff8f4",
+                        "on-primary-fixed-variant": "#663e09",
+                        
+                        "espresso": "#2D2926",
+                        "copper": "#A8763E"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0",
+                        "lg": "0",
+                        "xl": "0",
+                        "full": "0"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "unit": "4px",
+                        "margin": "64px",
+                        "section-gap": "128px",
+                        "container-max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "nav-link": ["Inter"],
+                        "display-md": ["Newsreader"],
+                        "headline-sm": ["Newsreader"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Newsreader"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "nav-link": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "display-md": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                        "headline-sm": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "display-lg": ["96px", {"lineHeight": "100px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-[#FCFAFA] dark:bg-[#1A1816] w-full top-0 border-b-[0.5px] border-[#2D2926]/20">
+<div class="flex justify-between items-center w-full px-12 py-8 max-w-[1440px] mx-auto">
+<div class="flex space-x-8">
+<a class="font-serif text-sm tracking-widest uppercase text-[#2D2926] dark:text-[#E5E1DE] hover:opacity-60 transition-opacity duration-300 cursor-pointer" href="#">Home</a>
+<a class="font-serif text-sm tracking-widest uppercase text-[#A8763E] border-b border-[#A8763E] pb-1 cursor-pointer transition-all duration-500" href="#">Shop</a>
+<a class="font-serif text-sm tracking-widest uppercase text-[#2D2926] dark:text-[#E5E1DE] hover:opacity-60 transition-opacity duration-300 cursor-pointer" href="#">Story</a>
+<a class="font-serif text-sm tracking-widest uppercase text-[#2D2926] dark:text-[#E5E1DE] hover:opacity-60 transition-opacity duration-300 cursor-pointer" href="#">Stockists</a>
+<a class="font-serif text-sm tracking-widest uppercase text-[#2D2926] dark:text-[#E5E1DE] hover:opacity-60 transition-opacity duration-300 cursor-pointer" href="#">Journal</a>
+</div>
+<div class="text-xl font-bold border border-[#2D2926] dark:border-[#E5E1DE] px-3 py-1 tracking-tighter text-[#A8763E]">
+                SPROD-KRAAKS
+            </div>
+<div class="flex space-x-8">
+<a class="font-serif text-sm tracking-widest uppercase text-[#2D2926] dark:text-[#E5E1DE] hover:opacity-60 transition-opacity duration-300 cursor-pointer" href="#">Basket</a>
+<a class="font-serif text-sm tracking-widest uppercase text-[#2D2926] dark:text-[#E5E1DE] hover:opacity-60 transition-opacity duration-300 cursor-pointer" href="#">Global</a>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow max-w-container-max-width mx-auto px-gutter w-full pb-section-gap">
+<!-- Header Section -->
+<header class="py-margin grid grid-cols-12 gap-gutter items-end mt-16 mb-16">
+<div class="col-span-12 md:col-span-7">
+<h1 class="font-display-lg text-display-lg text-espresso italic">The whole shelf.</h1>
+</div>
+<div class="col-span-12 md:col-span-5 md:pl-8">
+<p class="font-body-lg text-body-lg text-espresso max-w-md">Twelve crackers across two ranges. Original is for everyday joy. Protein+ is for the days you need a little more.</p>
+</div>
+</header>
+<!-- Divider -->
+<div class="w-full h-px bg-espresso opacity-20 mb-8"></div>
+<!-- Filter Row -->
+<div class="flex justify-center mb-margin">
+<ul class="flex space-x-6 items-center text-espresso font-label-caps text-label-caps uppercase tracking-widest">
+<li><a class="text-copper border-b border-copper pb-1" href="#">All</a></li>
+<li class="text-espresso/40">·</li>
+<li><a class="hover:text-copper transition-colors duration-300" href="#">Original</a></li>
+<li class="text-espresso/40">·</li>
+<li><a class="hover:text-copper transition-colors duration-300" href="#">Protein+</a></li>
+<li class="text-espresso/40">·</li>
+<li><a class="hover:text-copper transition-colors duration-300" href="#">New</a></li>
+<li class="text-espresso/40">·</li>
+<li><a class="hover:text-copper transition-colors duration-300" href="#">Coming soon</a></li>
+</ul>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-16">
+<!-- Product 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] mb-4 overflow-hidden bg-[#F2EDE9]">
+<img alt="Cracker Box" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A highly detailed, editorial-style photograph of a minimalist cracker box resting on a textured cream surface. The lighting is warm and directional, creating high-contrast, dramatic shadows typical of slow-food, high-end culinary photography. The color palette is strictly desaturated with deep espresso blacks and pristine warm whites, embodying a quiet luxury aesthetic. No glossy or mass-market elements are present." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBBgnjZz7AuKdLkLbsoz44KKMNWl2cXVDYSP9f5lkK1xRK5Hjckbd_iTTDht2j5lda9viF0dwJXpVKNfvoDbDQQrylAjsWIbILjddk3bqZTipdklxaZqNKIC4O6rwmPckyFGBhcEj4it2wqUG0HVVvwu--36hE_m_4tcCn2pmWwADcA04RlGoE_AebBZCAaam5dkFm1n0BwhhbfjwnaQvekNH5uwV4xiVNoZzqVEfKRAkzb0Wzq04EDvoGagtQNcyfAJSYN7v2eDOo"/>
+</div>
+<div class="flex flex-col items-center text-center space-y-2">
+<span class="font-label-caps text-[10px] text-copper uppercase tracking-widest">ORIGINAL</span>
+<h3 class="font-headline-sm text-[24px] font-medium text-espresso">Grate to be Cheesy</h3>
+<p class="font-body-md text-[14px] italic text-espresso/70">nutty, melted, addictive</p>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] mb-4 overflow-hidden bg-[#F2EDE9]">
+<img alt="Cracker Box" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A highly detailed, editorial-style photograph of a minimalist cracker box resting on a textured cream surface. The lighting is warm and directional, creating high-contrast, dramatic shadows typical of slow-food, high-end culinary photography. The color palette is strictly desaturated with deep espresso blacks and pristine warm whites, embodying a quiet luxury aesthetic. No glossy or mass-market elements are present." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDURl7gd86tAOlV26zbPtgZIntwvRGmuhK2FGZydwZp0lyK2f6KT-1cFlEj5wCcf_Uox_bt1EP0QTlkBWXnlUfczrBPgDjnZgdeCeZAOCtLifr3Uz_srK0MzGkDCnO8gZW0dZSJfNh5Gp3eHeLv6hU1ili6rI2fuUe2QaaQoYijDPZ2ZCH4rWUJARYPeQYIgzbIb8RuRX1o3frOXLhpFkpvI09aBO0uE4Gyj06f34d78OCgJTbkl_0QzbG5zGkkVAcZ3WUaRJyJInLy"/>
+</div>
+<div class="flex flex-col items-center text-center space-y-2">
+<span class="font-label-caps text-[10px] text-copper uppercase tracking-widest">PROTEIN+</span>
+<h3 class="font-headline-sm text-[24px] font-medium text-espresso">Grate to be Cheesy Protein+</h3>
+<p class="font-body-md text-[14px] italic text-espresso/70">nutty, charged, satisfying</p>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] mb-4 overflow-hidden bg-[#F2EDE9]">
+<img alt="Cracker Box" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A highly detailed, editorial-style photograph of a minimalist cracker box resting on a textured cream surface. The lighting is warm and directional, creating high-contrast, dramatic shadows typical of slow-food, high-end culinary photography. The color palette is strictly desaturated with deep espresso blacks and pristine warm whites, embodying a quiet luxury aesthetic. No glossy or mass-market elements are present." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvokGDgai2F5YipFxwiAf16uaEhiwC9c96-4WI9PH46KQ6LCF3eoDGTAB0F6RowBUcPB0fX1dSo1Piw2roN-96DgkpxjE5aNDNQG57Lb5utwmrlDkQroRtQCKk8WrZmOh76QCV8bI9QrOgeG07QOqPIb7xT8XBZNHsJ8uAhD00xkwlGV9Wi2C-MZtrWHtS8yZBBREcNVAB7FBLH2W-kDAlxsLYjWNtHA5X8fNlL6Yha4JmSuXHRZaFGkMIgaOs1v14qT5DsgeRimKa"/>
+</div>
+<div class="flex flex-col items-center text-center space-y-2">
+<span class="font-label-caps text-[10px] text-copper uppercase tracking-widest">ORIGINAL</span>
+<h3 class="font-headline-sm text-[24px] font-medium text-espresso">I feel for Falafel</h3>
+<p class="font-body-md text-[14px] italic text-espresso/70">spiced, herbal, deep</p>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] mb-4 overflow-hidden bg-[#F2EDE9]">
+<img alt="Cracker Box" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A highly detailed, editorial-style photograph of a minimalist cracker box resting on a textured cream surface. The lighting is warm and directional, creating high-contrast, dramatic shadows typical of slow-food, high-end culinary photography. The color palette is strictly desaturated with deep espresso blacks and pristine warm whites, embodying a quiet luxury aesthetic. No glossy or mass-market elements are present." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm6le7r_OcJinE0zCffMYK6eew81U60jAc9dbTxyJATrhOKWsb-OQPYv-9wYee9zXVpt6bJr6rjhJWt5Sx6nGT9FKoLpK6lR9piGpa-yyVOMAbKCx_q14dxLMySWDJDJljI0viM7YSB5OKOsR0e6ALAhD8YaWkY-XKYBuij6TVV8phOmoKJ1CTBQVxmp8GemQj9eMmmcd6A5QSnEmj5Sr-PRjdOAO_AiRQ1b1XaeagPWGQn1cHs4KSr20S79l61fVN0qqnB0axfefW"/>
+</div>
+<div class="flex flex-col items-center text-center space-y-2">
+<span class="font-label-caps text-[10px] text-copper uppercase tracking-widest">PROTEIN+</span>
+<h3 class="font-headline-sm text-[24px] font-medium text-espresso">I feel for Falafel Protein+</h3>
+<p class="font-body-md text-[14px] italic text-espresso/70">spiced, fortified, deep</p>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] mb-4 overflow-hidden bg-[#F2EDE9]">
+<img alt="Cracker Box" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A highly detailed, editorial-style photograph of a minimalist cracker box resting on a textured cream surface. The lighting is warm and directional, creating high-contrast, dramatic shadows typical of slow-food, high-end culinary photography. The color palette is strictly desaturated with deep espresso blacks and pristine warm whites, embodying a quiet luxury aesthetic. No glossy or mass-market elements are present." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv9vIKWWhFcjLwu-TVXFrr4eZ9H6a-I-fE45FYwdmuagsiS-PQjQhY9LPnR8plfR58OIf0le_P8DI3bZ-bgo0fwrYXYABQXkwniEDZ0oabb8gDMsHg3UJzqXiEgSBTbuCGJJlXckt1BYdaAZp7lxQf6wm-5PweWVIfdQ9XkI4UOVot-qsqWJUYSi6tFIHldr48VpGst9Z-wxa_PiGEoZL_T5FZxA0oTNEci2JLQV7rPXuRwPMfwcdQ3FbjIWhyr4wMnvvU9fuAyskm"/>
+</div>
+<div class="flex flex-col items-center text-center space-y-2">
+<span class="font-label-caps text-[10px] text-copper uppercase tracking-widest">ORIGINAL</span>
+<h3 class="font-headline-sm text-[24px] font-medium text-espresso">I olive you</h3>
+<p class="font-body-md text-[14px] italic text-espresso/70">earthy, mediterranean</p>
+</div>
+</div>
+<!-- Product 6 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] mb-4 overflow-hidden bg-[#F2EDE9]">
+<img alt="Cracker Box" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A highly detailed, editorial-style photograph of a minimalist cracker box resting on a textured cream surface. The lighting is warm and directional, creating high-contrast, dramatic shadows typical of slow-food, high-end culinary photography. The color palette is strictly desaturated with deep espresso blacks and pristine warm whites, embodying a quiet luxury aesthetic. No glossy or mass-market elements are present." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUnCMRYvxpMSSbRcUrHx0-5u9EsR23AIpJ_KxQ3MKNwIR5hM5ybXlyzZ7nyxA87Fd9H9XDSPUTvm9dRgA5wyG4Yu07jL-HVyYKbMt27XLSxK81NGD1GYzgNMYmHcFyM7nxGhgNRT3jSg0WZJvuJB701mSgnlXaTuW5mNcQTD7GLccJ4SMztrtSIiqNosLtX4BbsXp7vaXF83wCSUwEDS_c6CksUYA6RJ2jYwOzKQ1ZZmRLLO7JjIaBj1ANDnJu4jpGo55TFWMXlAho"/>
+</div>
+<div class="flex flex-col items-center text-center space-y-2">
+<span class="font-label-caps text-[10px] text-copper uppercase tracking-widest">PROTEIN+</span>
+<h3 class="font-headline-sm text-[24px] font-medium text-espresso">I olive you Protein+</h3>
+<p class="font-body-md text-[14px] italic text-espresso/70">olive-rich, fortified</p>
+</div>
+</div>
+<!-- Product 7 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] mb-4 overflow-hidden bg-[#F2EDE9]">
+<img alt="Cracker Box" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A highly detailed, editorial-style photograph of a minimalist cracker box resting on a textured cream surface. The lighting is warm and directional, creating high-contrast, dramatic shadows typical of slow-food, high-end culinary photography. The color palette is strictly desaturated with deep espresso blacks and pristine warm whites, embodying a quiet luxury aesthetic. No glossy or mass-market elements are present." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv21brhrgXSBWboWvjxT5Pfla3XcWTm_9eUrfBlTtZpT44Ga0R7IeqORqulYS8Urqt7hJY0tj15buSLo4VKlqVphKJNFO0P-OXJNXgs09KItBypNB16aShfVOjt80I6izbH4zcbeT-uyK_Z9x-_VqNCpTNlDJ6aigGfdmOt9Iiam_fkNhfY5cfFystYlxltwGpSgqZZUHD-wOVJ9BnFGSJ-qfxgAgPQ439rQjWf-36L8E7LF1jqcZkp1kt4dxNX8eekRPYV0yRytz_"/>
+</div>
+<div class="flex flex-col items-center text-center space-y-2">
+<span class="font-label-caps text-[10px] text-copper uppercase tracking-widest">ORIGINAL</span>
+<h3 class="font-headline-sm text-[24px] font-medium text-espresso">Sesame's treat</h3>
+<p class="font-body-md text-[14px] italic text-espresso/70">toasted, sweet, snappy</p>
+</div>
+</div>
+<!-- Product 8 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] mb-4 overflow-hidden bg-[#F2EDE9]">
+<img alt="Cracker Box" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A highly detailed, editorial-style photograph of a minimalist cracker box resting on a textured cream surface. The lighting is warm and directional, creating high-contrast, dramatic shadows typical of slow-food, high-end culinary photography. The color palette is strictly desaturated with deep espresso blacks and pristine warm whites, embodying a quiet luxury aesthetic. No glossy or mass-market elements are present." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQgollqTPhPGy5CIZLEZ-SuJw1BXydD55QZK2_CUl-M-rysZTrrb8TgDG7JlnN6gJRuVX78IZEnTDierixdVmVCdjsS5V9YDN0HGvPhb4S_UhBO39sudU2Jpoj1y5y4mxVsQ9nBeLf6jWRDUCPI79lOaoUtK1lSnqfnjT4ZYxjbfujIIeUAAl_OCETS3gdbZsZOhFrPyFbN2VVqkuVPVXN1MT3ePzHxZTyWFwlIg3P-rScUv-IB6f6iUqB6IEvD8XHzMgZNfzI2MtO"/>
+</div>
+<div class="flex flex-col items-center text-center space-y-2">
+<span class="font-label-caps text-[10px] text-copper uppercase tracking-widest">PROTEIN+</span>
+<h3 class="font-headline-sm text-[24px] font-medium text-espresso">Sesame's treat Protein+</h3>
+<p class="font-body-md text-[14px] italic text-espresso/70">toasted, fortified, snappy</p>
+</div>
+</div>
+<!-- Product 9 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] mb-4 overflow-hidden bg-[#F2EDE9]">
+<img alt="Cracker Box" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A highly detailed, editorial-style photograph of a minimalist cracker box resting on a textured cream surface. The lighting is warm and directional, creating high-contrast, dramatic shadows typical of slow-food, high-end culinary photography. The color palette is strictly desaturated with deep espresso blacks and pristine warm whites, embodying a quiet luxury aesthetic. No glossy or mass-market elements are present." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgyG5lkW5tW68--qSW_mnMNuwg1LYpR5CqrQm3edkvPF_d3L-au6XNlwQIzwhH_eH5gLEBNkpIHW2Z4cvnMhhw5v4vZT0ka1cxhQVkhsqlc4VonOYDdf1WYoQKBmB9THH0IsxpQnS-9a5-XSnls_7iLcVOgvRmYnDKD3AQOYGn4ezlirZFT2RPQgqjn-WNyw8StKdO9vB-8Ub6k73VWiW2YDKXZ1cSmZBq2-gIdxTFSYE3nuobDwEDuHpF1rID7H4lbdOTxjTJxGO0"/>
+</div>
+<div class="flex flex-col items-center text-center space-y-2">
+<span class="font-label-caps text-[10px] text-copper uppercase tracking-widest">ORIGINAL</span>
+<h3 class="font-headline-sm text-[24px] font-medium text-espresso">That's a spicy tomato</h3>
+<p class="font-body-md text-[14px] italic text-espresso/70">sun-ripe, smoky</p>
+</div>
+</div>
+<!-- Product 10 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] mb-4 overflow-hidden bg-[#F2EDE9]">
+<img alt="Cracker Box" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A highly detailed, editorial-style photograph of a minimalist cracker box resting on a textured cream surface. The lighting is warm and directional, creating high-contrast, dramatic shadows typical of slow-food, high-end culinary photography. The color palette is strictly desaturated with deep espresso blacks and pristine warm whites, embodying a quiet luxury aesthetic. No glossy or mass-market elements are present." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzRkE3R_HUx7S5BZDWGcSqoyBslqmxhfRz1CzuwyfKFjx72XGi87v4pKSK6vSGIoZGtXIfGh6t2FIw_5KU4kTE85kPD10BFIH7PClodmJE7waV3QjzHqgaauFEKfn9BB1CDOjJNKBgYWwmqvGqoRZkuDv8Vf1y2Pr7XGBOlY1VcJr7fRatvY2PkOcz8lR1UybbKkJP45uFvHdbIqNmhBRpaFK2fGyGw9SNPeFpTMfIopyPWvGHXL0PxWi5Dvi47Kl5d_YScBY2RXJ6"/>
+</div>
+<div class="flex flex-col items-center text-center space-y-2">
+<span class="font-label-caps text-[10px] text-copper uppercase tracking-widest">PROTEIN+</span>
+<h3 class="font-headline-sm text-[24px] font-medium text-espresso">That's a spicy tomato Protein+</h3>
+<p class="font-body-md text-[14px] italic text-espresso/70">sun-ripe, fortified, smoky</p>
+</div>
+</div>
+<!-- Product 11 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] mb-4 overflow-hidden bg-[#F2EDE9]">
+<img alt="Cracker Box" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A highly detailed, editorial-style photograph of a minimalist cracker box resting on a textured cream surface. The lighting is warm and directional, creating high-contrast, dramatic shadows typical of slow-food, high-end culinary photography. The color palette is strictly desaturated with deep espresso blacks and pristine warm whites, embodying a quiet luxury aesthetic. No glossy or mass-market elements are present." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa-xijNzH0QTjG8qdPuMoH2XU50ajMtAEHRQfKjmbsD_qTo8pXry8z3-aM1vEtMKMqdVrYyOwJnRf7cAkyg6lFb3doLFRxZXPLhgAEYXxw9MRV1Of4DbpRkZM1rZYyAlsQpeS7ihth6IL6HKfPshXzUeZ_uhDy21LR-vEoKyYAjsPx75wzDNmvxbG7e0oglrHN1JDQ66TdgfWX6JQ1m7LCPo2qBRTLKaJFnqQirSbwR8lWwcbvOpyqi8fsIzmbmdfCwiSZLZlvzZCp"/>
+</div>
+<div class="flex flex-col items-center text-center space-y-2">
+<span class="font-label-caps text-[10px] text-copper uppercase tracking-widest">ORIGINAL</span>
+<h3 class="font-headline-sm text-[24px] font-medium text-espresso">Thymes are good</h3>
+<p class="font-body-md text-[14px] italic text-espresso/70">wild, bright, lebanese</p>
+</div>
+</div>
+<!-- Product 12 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] mb-4 overflow-hidden bg-[#F2EDE9]">
+<img alt="Cracker Box" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A highly detailed, editorial-style photograph of a minimalist cracker box resting on a textured cream surface. The lighting is warm and directional, creating high-contrast, dramatic shadows typical of slow-food, high-end culinary photography. The color palette is strictly desaturated with deep espresso blacks and pristine warm whites, embodying a quiet luxury aesthetic. No glossy or mass-market elements are present." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-sahvwdrc4_xKWRVETkArZpp5MAW1VxXQHws1fmGDPZi_6BEZcan8cPihgCEoOkmMHpmNIURF3TK9XAhb9pbJOQBnFlC53XnO0NYt1ZOS9YNZg6oDAxl_7jdG4TACir_Z9YA8A7CT4KWaVhYKbvTxroYgEvnnLAtH0aF7sYvE4y62zjnevQ3SWNwNp0DFyU-QjHzSmOQOhdVZcvXhToyQutn0kARs8xeBdP1Ab_nN_qHm_PXRxyepFxS7ucEjpiFaO5bNR4yyTLHx"/>
+</div>
+<div class="flex flex-col items-center text-center space-y-2">
+<span class="font-label-caps text-[10px] text-copper uppercase tracking-widest">PROTEIN+</span>
+<h3 class="font-headline-sm text-[24px] font-medium text-espresso">Thymes are good Protein+</h3>
+<p class="font-body-md text-[14px] italic text-espresso/70">wild, fortified, lebanese</p>
+</div>
+</div>
+</div>
+<!-- Footnote -->
+<div class="mt-24 text-center w-full border-t border-espresso/10 pt-8">
+<p class="font-body-md text-[14px] italic text-espresso/60">Crafted by hand in small batches, every week.</p>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#FCFAFA] dark:bg-[#1A1816] w-full border-t-[0.5px] border-[#2D2926]/20 mt-32">
+<div class="grid grid-cols-12 gap-8 w-full px-12 py-20 max-w-[1440px] mx-auto">
+<div class="col-span-12 md:col-span-6 flex flex-col justify-between">
+<div class="font-serif italic text-lg text-[#A8763E]">
+                    SPROD-KRAAKS
+                </div>
+<div class="mt-16 font-serif text-xs leading-relaxed text-[#2D2926] dark:text-[#E5E1DE]">
+                    © SPROD-KRAAKS. Founders: Marwan Cabbabé &amp; David Asseily Capretti.
+                </div>
+</div>
+<div class="col-span-12 md:col-span-6 flex flex-col items-start md:items-end space-y-4">
+<a class="font-serif text-xs leading-relaxed text-[#2D2926]/60 dark:text-[#E5E1DE]/60 hover:text-[#A8763E] transition-colors duration-300 underline-offset-4 hover:underline" href="#">Contact</a>
+<a class="font-serif text-xs leading-relaxed text-[#2D2926]/60 dark:text-[#E5E1DE]/60 hover:text-[#A8763E] transition-colors duration-300 underline-offset-4 hover:underline" href="#">Wholesale</a>
+<a class="font-serif text-xs leading-relaxed text-[#2D2926]/60 dark:text-[#E5E1DE]/60 hover:text-[#A8763E] transition-colors duration-300 underline-offset-4 hover:underline" href="#">Press</a>
+<a class="font-serif text-xs leading-relaxed text-[#2D2926]/60 dark:text-[#E5E1DE]/60 hover:text-[#A8763E] transition-colors duration-300 underline-offset-4 hover:underline" href="#">Privacy</a>
+<a class="font-serif text-xs leading-relaxed text-[#2D2926]/60 dark:text-[#E5E1DE]/60 hover:text-[#A8763E] transition-colors duration-300 underline-offset-4 hover:underline" href="#">Shipping</a>
+</div>
+</div>
+</footer>
+</body></html>

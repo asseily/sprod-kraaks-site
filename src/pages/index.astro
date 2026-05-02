@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Range from '../components/Range.astro';
+import Stockists from '../components/Stockists.astro';
+import Newsletter from '../components/Newsletter.astro';
 ---
 
 <Layout title="Sprød-Kråaks — Big flavor. Quietly made.">
@@ -78,107 +81,7 @@ import Layout from '../layouts/Layout.astro';
 </div>
 </section>
 
-<!-- Editorial Section -->
-<section class="w-full px-8 md:px-margin py-section-gap flex flex-col gap-y-32">
-<!-- Header Row -->
-<header class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 border-b border-outline/20 pb-16">
-<h2 class="font-display-lg text-display-md md:text-[60px] italic leading-tight max-w-2xl text-on-background">A range to graze</h2>
-<p class="font-display-md text-headline-sm max-w-xl text-on-surface-variant">Twelve crackers across two ranges. Original for everyday joy, Protein+ for the days you need more.</p>
-</header>
-<!-- Product Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-gutter gap-y-24">
-<!-- Product 1 -->
-<article class="flex flex-col group cursor-pointer">
-<div class="w-full h-[600px] mb-8 overflow-hidden bg-surface-container relative border border-outline/10">
-<img alt="Grate to be Cheesy crackers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A moody, high-contrast overhead shot of artisanal cheese-flavored crackers scattered elegantly on a textured cream tabletop. Warm, focused, directional natural light casts long, sophisticated shadows, highlighting the rustic texture of the crackers. The aesthetic is extremely minimalist, quiet luxury, with an editorial slow-food magazine style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANIC3TcxP701A7xQeMD19WvIOfVgxs6zsPmQCY-IqMC6gix8oHdTfxUe_nkVIrfA6v6ag6w2xZE627_UG0xmVfymjtIxwt2lr2LvlnyTc6W0080cOMo4IR4lMv86L7EbMeoxaFTu2CVg2q0Z5A2l04OVFo5ii18DGlIq7nLSwC5YRBa16sK76ePFQ8DNcleMUWI5Ai769O6tM19i3REHx8dAJdVY0pyA0SpvrorrcTXf6NeZAVAYaB3T-eCQ6ldbz9AAbNw5em2k-u"/>
-</div>
-<div class="flex flex-col items-start gap-3 px-2">
-<span class="font-label-caps text-label-caps text-[#A8763E] uppercase tracking-widest">ORIGINAL</span>
-<h3 class="font-headline-sm text-[28px] font-medium leading-none text-on-background">Grate to be Cheesy</h3>
-<p class="font-body-md text-body-md italic text-[#2D2926] opacity-80">nutty, melted, addictive</p>
-<div class="mt-4 flex items-center gap-2 text-[#A8763E] border-b border-[#A8763E] pb-1 group-hover:pl-2 transition-all duration-300">
-<span class="font-label-caps text-label-caps uppercase">Discover</span>
-<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
-</div>
-</div>
-</article>
-<!-- Product 2 -->
-<article class="flex flex-col group cursor-pointer">
-<div class="w-full h-[600px] mb-8 overflow-hidden bg-surface-container relative border border-outline/10">
-<img alt="I feel for Falafel crackers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A moody, high-contrast overhead shot of artisanal herb-spiced crackers arranged beautifully on a textured cream tabletop. Warm, focused, directional natural light casts long, sophisticated shadows, highlighting the rustic, deep texture of the crackers. The aesthetic is extremely minimalist, quiet luxury, with an editorial slow-food magazine style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRTorcI6FJ1rdFaUfBALWKZBVCbE_5tbn21ddYMNes_YjDBY1R7CVPL3KA1obTL9w0ElFQtY5xfuZbQ6B8pTKtE0cTlaCzwaxaQtQWSo1zKsSjVGMSS4y4igJWFKg2krM7N0V2BzYqFHkN0iU1GVT0vYmhwzvxmVdkNXxmQ4_fxm8IEQPhb1jT571IPQLfzzNl7vYFhX-lJFb7J3hBBCh_nAf9XeMpbqfqRg7c3ZXwaIF72aKwZKIqQX7uW8RCd-2vBf6lYznc8MGw"/>
-</div>
-<div class="flex flex-col items-start gap-3 px-2">
-<span class="font-label-caps text-label-caps text-[#A8763E] uppercase tracking-widest">ORIGINAL</span>
-<h3 class="font-headline-sm text-[28px] font-medium leading-none text-on-background">I feel for Falafel</h3>
-<p class="font-body-md text-body-md italic text-[#2D2926] opacity-80">spiced, herbal, deep</p>
-<div class="mt-4 flex items-center gap-2 text-[#A8763E] border-b border-[#A8763E] pb-1 group-hover:pl-2 transition-all duration-300">
-<span class="font-label-caps text-label-caps uppercase">Discover</span>
-<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
-</div>
-</div>
-</article>
-<!-- Product 3 -->
-<article class="flex flex-col group cursor-pointer">
-<div class="w-full h-[600px] mb-8 overflow-hidden bg-surface-container relative border border-outline/10">
-<img alt="I olive you crackers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A moody, high-contrast overhead shot of artisanal olive crackers resting elegantly on a textured cream tabletop. Warm, focused, directional natural light casts long, sophisticated shadows, highlighting the rustic, earthy texture of the crackers. The aesthetic is extremely minimalist, quiet luxury, with an editorial slow-food magazine style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB93QRM3TCpdfK-yk5mu_aMywEfaHBbC-oq7TKs4dPyCoJEiiBORhpexEje0KEbTHRrINoeDxN2wHQvD9EyQSO00eWuhrSM--NZ7OaketRZC7RHvlCpav_zZSrQR7Rvc-Jsg-x07k8q96wrZUeRujJ7qDW9nPwgQq50fUaIYn8Sl700vOfieqxRNZVoT7zNyAzpiiqCEDxxGOFBbUys9OMKssslW4x2w-MywIAfFkA_zX0MwMn70664rfGxf_RJuqO1P3k0dbn3H_Y8"/>
-</div>
-<div class="flex flex-col items-start gap-3 px-2">
-<span class="font-label-caps text-label-caps text-[#A8763E] uppercase tracking-widest">ORIGINAL</span>
-<h3 class="font-headline-sm text-[28px] font-medium leading-none text-on-background">I olive you</h3>
-<p class="font-body-md text-body-md italic text-[#2D2926] opacity-80">earthy, mediterranean</p>
-<div class="mt-4 flex items-center gap-2 text-[#A8763E] border-b border-[#A8763E] pb-1 group-hover:pl-2 transition-all duration-300">
-<span class="font-label-caps text-label-caps uppercase">Discover</span>
-<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
-</div>
-</div>
-</article>
-<!-- Product 4 -->
-<article class="flex flex-col group cursor-pointer">
-<div class="w-full h-[600px] mb-8 overflow-hidden bg-surface-container relative border border-outline/10">
-<img alt="Sesame's treat crackers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A moody, high-contrast overhead shot of artisanal sesame-crusted crackers scattered beautifully on a textured cream tabletop. Warm, focused, directional natural light casts long, sophisticated shadows, highlighting the rustic, toasted texture of the crackers. The aesthetic is extremely minimalist, quiet luxury, with an editorial slow-food magazine style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDffB6TW8ln5S4cOY_zn13-9VNibC6FnMX2MfNh7WYs37WiMGtVqdfOa8aGEQdaxFajE6MCYVxUKh13uMq6Bab_AMWYEFsNk5VMsWfYYvGP4du9UuWBpgBNrio1MZ_VMwfUu9azumFpTmJmQuOsgychhMtEwStMYnJ-C1-UAoU-4vkys319FqBwpjv-JxaZW9R1Eo-mszmYP5WAEUjR_iMTV53TowQt--BLniJ-86h0aAcE5BHsQ1deRfJdWOovivskg7kUNKNTLFRG"/>
-</div>
-<div class="flex flex-col items-start gap-3 px-2">
-<span class="font-label-caps text-label-caps text-[#A8763E] uppercase tracking-widest">ORIGINAL</span>
-<h3 class="font-headline-sm text-[28px] font-medium leading-none text-on-background">Sesame's treat</h3>
-<p class="font-body-md text-body-md italic text-[#2D2926] opacity-80">toasted, sweet, snappy</p>
-<div class="mt-4 flex items-center gap-2 text-[#A8763E] border-b border-[#A8763E] pb-1 group-hover:pl-2 transition-all duration-300">
-<span class="font-label-caps text-label-caps uppercase">Discover</span>
-<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
-</div>
-</div>
-</article>
-<!-- Product 5 -->
-<article class="flex flex-col group cursor-pointer">
-<div class="w-full h-[600px] mb-8 overflow-hidden bg-surface-container relative border border-outline/10">
-<img alt="That's a spicy tomato crackers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A moody, high-contrast overhead shot of artisanal tomato-spiced crackers arranged elegantly on a textured cream tabletop. Warm, focused, directional natural light casts long, sophisticated shadows, highlighting the rustic, smoky texture of the crackers. The aesthetic is extremely minimalist, quiet luxury, with an editorial slow-food magazine style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDstSD7ghfmscGFsXozgDxyaGxMXrMlvgYca6T5WtVA2zLvskrAh5PoFcVx7HBA9t-mQD5HW__LNJLVEk8tnXuoK0sidqBrbaddcIbKemDsv3FX3fw7E4UUaK84gliY69cfFfXDyowbdbqm4A0tg2HY8VWdupE0_NaAmbYhh0EAQCHpTWx5-yezt2Fhf4mCFRt1ceQ1RLilFfqkgeccHx8gnuLRdcy_Nhbt8l5HYVYWRyj-2U4FuUUjimBAhF5tOFi3eibVRm4Tdx_g"/>
-</div>
-<div class="flex flex-col items-start gap-3 px-2">
-<span class="font-label-caps text-label-caps text-[#A8763E] uppercase tracking-widest">ORIGINAL</span>
-<h3 class="font-headline-sm text-[28px] font-medium leading-none text-on-background">That's a spicy tomato</h3>
-<p class="font-body-md text-body-md italic text-[#2D2926] opacity-80">sun-ripe, smoky</p>
-<div class="mt-4 flex items-center gap-2 text-[#A8763E] border-b border-[#A8763E] pb-1 group-hover:pl-2 transition-all duration-300">
-<span class="font-label-caps text-label-caps uppercase">Discover</span>
-<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
-</div>
-</div>
-</article>
-<!-- Product 6 -->
-<article class="flex flex-col group cursor-pointer">
-<div class="w-full h-[600px] mb-8 overflow-hidden bg-surface-container relative border border-outline/10">
-<img alt="Thymes are good crackers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A moody, high-contrast overhead shot of artisanal thyme-infused crackers scattered beautifully on a textured cream tabletop. Warm, focused, directional natural light casts long, sophisticated shadows, highlighting the rustic, wild texture of the crackers. The aesthetic is extremely minimalist, quiet luxury, with an editorial slow-food magazine style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbRhavI19K3SYl9ZOiMfcwzRJnfe8FixXKTkaOKnqSzAd38UYuj9engnRPlptoYB0jgpKMQqudnyMdVYlXPd44XpgTkBNzIha3Sr-tuKnIbOLZ_VtKI22WZN99dWE3u3bcgcEcmb3NhlEPTfijvNUZVv_TLaC86F3ofeorBk1ZhrWphP1dvT_UxvfDC8YVhapdrtDOjAnu89wIm0XaQ6vwGlLLzWgrigQpoYYsdYnV5gjg_sh6t5Tk6VjyxB0yQM78MWnH0pHFlEQN"/>
-</div>
-<div class="flex flex-col items-start gap-3 px-2">
-<span class="font-label-caps text-label-caps text-[#A8763E] uppercase tracking-widest">ORIGINAL</span>
-<h3 class="font-headline-sm text-[28px] font-medium leading-none text-on-background">Thymes are good</h3>
-<p class="font-body-md text-body-md italic text-[#2D2926] opacity-80">wild, bright, lebanese</p>
-<div class="mt-4 flex items-center gap-2 text-[#A8763E] border-b border-[#A8763E] pb-1 group-hover:pl-2 transition-all duration-300">
-<span class="font-label-caps text-label-caps uppercase">Discover</span>
-<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
-</div>
-</div>
-</article>
-</div>
-</section>
+<Range />
 
 <main class="w-full h-screen flex flex-col md:flex-row">
 <!-- Left Half: Photography -->
@@ -221,7 +124,7 @@ import Layout from '../layouts/Layout.astro';
 <h1 class="font-display-md text-display-md text-surface">
                     9 grams of protein. The same cracker, just stronger.
                 </h1>
-<p class="font-body-lg text-body-lg text-surface/80">
+<p class="font-body-lg text-body-lg font-headline italic text-surface/80">
                     We didn't reinvent the cracker. We made it stronger. Whey, egg-white, or plant. Same crisp, same character.
                 </p>
 </div>
@@ -234,7 +137,7 @@ import Layout from '../layouts/Layout.astro';
 </div>
 <div class="mt-auto pt-24">
 <a class="inline-flex items-center gap-2 group cursor-pointer" href="#">
-<span class="font-body-md text-body-md text-primary border-b border-primary/50 pb-0.5 group-hover:border-primary transition-colors duration-300">
+<span class="font-body-md text-body-md font-headline italic text-primary border-b border-primary/50 pb-0.5 group-hover:border-primary transition-colors duration-300">
                         See the Protein+ range
                     </span>
 <span class="material-symbols-outlined text-primary text-sm group-hover:translate-x-1 transition-transform duration-300" style="font-variation-settings: 'wght' 300;">
@@ -290,6 +193,10 @@ import Layout from '../layouts/Layout.astro';
 </div>
 </div>
 </main>
+
+<Stockists />
+
+<Newsletter />
 
 <footer class="w-full mt-32 border-t border-[#2D2926]/20 bg-[#FDFCF8]">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-24 px-12 py-24 max-w-screen-2xl mx-auto">

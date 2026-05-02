@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contact — Sprød-Kråaks">
+  <Nav active="contact" />
+<!-- TopNavBar -->
+
+<main class="max-w-container-max-width mx-auto px-margin">
+<!-- Hero Section -->
+<section class="py-section-gap pt-32 text-center">
+<span class="block font-label-caps text-label-caps text-primary uppercase mb-6 tracking-widest">GET IN TOUCH</span>
+<h1 class="font-display-lg text-display-lg italic mb-8">Pull up a chair.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">For wholesale, press, recipes, or just to say hello.</p>
+</section>
+<!-- Two Column Content -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-gutter pb-section-gap">
+<!-- Left Column: Form -->
+<div class="pr-0 md:pr-16">
+<form class="space-y-12">
+<div class="relative">
+<label class="block font-label-caps text-label-caps uppercase text-on-background mb-4" for="name">NAME</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 font-body-md text-body-md text-on-background placeholder-on-surface-variant/50 transition-colors rounded-none" id="name" name="name" placeholder="Enter your full name" type="text"/>
+</div>
+<div class="relative">
+<label class="block font-label-caps text-label-caps uppercase text-on-background mb-4" for="email">EMAIL</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 font-body-md text-body-md text-on-background placeholder-on-surface-variant/50 transition-colors rounded-none" id="email" name="email" placeholder="your@email.com" type="email"/>
+</div>
+<div class="relative">
+<label class="block font-label-caps text-label-caps uppercase text-on-background mb-4" for="subject">SUBJECT</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 font-body-md text-body-md text-on-background placeholder-on-surface-variant/50 transition-colors rounded-none" id="subject" name="subject" placeholder="What is this regarding?" type="text"/>
+</div>
+<div class="relative">
+<label class="block font-label-caps text-label-caps uppercase text-on-background mb-4" for="message">MESSAGE</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 font-body-md text-body-md text-on-background placeholder-on-surface-variant/50 transition-colors resize-none rounded-none" id="message" name="message" placeholder="Your message here..." rows="4"></textarea>
+</div>
+<div class="pt-6 flex flex-col items-start gap-4">
+<button class="bg-primary hover:bg-primary/90 text-on-primary font-nav-link text-nav-link px-10 py-4 transition-colors duration-300 rounded-none uppercase tracking-wider" type="submit">
+                            Send message
+                        </button>
+<p class="font-body-md text-[13px] text-on-surface-variant/70 italic">We try to reply within two working days.</p>
+</div>
+</form>
+</div>
+<!-- Right Column: Info Blocks -->
+<div class="pl-0 md:pl-16 border-t md:border-t-0 md:border-l border-outline-variant/30 pt-16 md:pt-0 flex flex-col space-y-16">
+<div class="space-y-4 relative">
+<span class="block font-label-caps text-label-caps text-primary uppercase tracking-widest">LEBANON</span>
+<h3 class="font-display-md text-2xl text-on-background">Marwan Cabbabe</h3>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-1">
+<p>+961 3 827 681</p>
+<p>m.cabbabe@sprod-kraaks.com</p>
+<p>Beirut</p>
+</div>
+<div class="absolute -bottom-8 left-0 w-full h-[1px] bg-outline-variant/20"></div>
+</div>
+<div class="space-y-4 relative">
+<span class="block font-label-caps text-label-caps text-primary uppercase tracking-widest">UAE</span>
+<h3 class="font-display-md text-2xl text-on-background">David Asseily Capretti</h3>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-1">
+<p>+971 556 55 7923</p>
+<p>d.capretti@sprod-kraaks.com</p>
+<p>Dubai</p>
+</div>
+<div class="absolute -bottom-8 left-0 w-full h-[1px] bg-outline-variant/20"></div>
+</div>
+<div class="space-y-4">
+<span class="block font-label-caps text-label-caps text-primary uppercase tracking-widest">GENERAL</span>
+<h3 class="font-display-md text-2xl text-on-background">Wholesale and press</h3>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-1">
+<p>hello@sprod-kraaks.com</p>
+<p>@sprodkraaks on Instagram</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="pb-section-gap pt-16 border-t border-outline-variant/20 text-center">
+<h2 class="font-headline-sm text-headline-sm italic text-on-background mb-16">We are based in Lebanon, with friends from Dubai to London.</h2>
+<!-- Map Placeholder -->
+<div class="w-full h-96 bg-surface-container relative overflow-hidden flex items-center justify-center border border-outline-variant/30 group">
+<img alt="Map placeholder" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-20 grayscale" data-alt="A highly detailed, minimalist vintage-style world map rendered in muted cream and espresso tones. The map is flat, highly graphic, and editorial in feel, lacking glossy geographical textures. Subtle hairline curves connect key global cities like Beirut, Dubai, London, and Paris, marked by small, sharp geometric dots. The overall aesthetic is calm, intellectual, and slow-food artisanal, echoing a high-end travel journal printed on heavy stock paper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYAQ9F1bK3kPVu8lbQbNLamGERe417Jqzp-Mp6E55aj7NBhcmR766BjsRin44FTp0H3DV-9ggsQRLd_YpdC3CFwbSuRlkEloERIP8OOzkCd26uI6SNA12Ek6xao2_7AwR1b-JPkRE4yUuyZHoOuews0OMqx7cHTbm3_dOLJHDZ8F8IqnEwcs3igvHbi4FBBfLW3R8jvSUvKnKBKhoxh0A9h58s7hc2tDUtRjXsMS96t1fRqyujE0_dnJki4jsiJt2euBPHvVG1JO9v"/>
+<div class="absolute inset-0 bg-background/50 backdrop-blur-sm group-hover:backdrop-blur-0 transition-all duration-700"></div>
+<!-- Abstract nodes -->
+<div class="relative z-10 w-full h-full max-w-4xl mx-auto">
+<div class="absolute top-[40%] left-[30%] w-2 h-2 bg-primary flex items-center justify-center"><span class="absolute top-4 font-label-caps text-[10px] uppercase text-on-background whitespace-nowrap">Paris</span></div>
+<div class="absolute top-[35%] left-[25%] w-2 h-2 bg-primary flex items-center justify-center"><span class="absolute top-4 font-label-caps text-[10px] uppercase text-on-background whitespace-nowrap">London</span></div>
+<div class="absolute top-[50%] left-[55%] w-2 h-2 bg-primary flex items-center justify-center"><span class="absolute top-4 font-label-caps text-[10px] uppercase text-on-background whitespace-nowrap">Beirut</span></div>
+<div class="absolute top-[60%] left-[65%] w-2 h-2 bg-primary flex items-center justify-center"><span class="absolute top-4 font-label-caps text-[10px] uppercase text-on-background whitespace-nowrap">Dubai</span></div>
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<path class="text-primary/30" d="M 30% 40% Q 40% 30% 55% 50% T 65% 60%" fill="transparent" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1"></path>
+<path class="text-primary/30" d="M 25% 35% Q 30% 30% 55% 50%" fill="transparent" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1"></path>
+</svg>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+  <Footer />
+</Layout>

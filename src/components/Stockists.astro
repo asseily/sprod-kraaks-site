@@ -1,0 +1,23 @@
+---
+const stockists = ['SPINNEYS', 'WAITROSE', 'CARREFOUR', 'ECO MARKET', 'GOURMINI'];
+---
+
+<section class="w-full px-8 md:px-16 py-24 bg-cream border-t border-espresso/10">
+  <div class="max-w-container-max mx-auto flex flex-col gap-y-8">
+    <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-4">
+      <span class="font-label text-label-caps uppercase tracking-widest text-copper">FIND US AT</span>
+      <a href="/stockists" class="font-label text-label-caps uppercase tracking-widest text-copper hover:opacity-60 transition-opacity">
+        Become a stockist →
+      </a>
+    </div>
+    <div class="border-t border-espresso/15"></div>
+    <div class="flex flex-wrap gap-x-12 gap-y-6 items-center font-headline text-headline-md text-espresso">
+      {stockists.map((s, i) => (
+        <>
+          <span>{s}</span>
+          {i < stockists.length - 1 && <span class="text-copper">·</span>}
+        </>
+      ))}
+    </div>
+  </div>
+</section>

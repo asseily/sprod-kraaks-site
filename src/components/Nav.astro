@@ -1,0 +1,36 @@
+---
+interface Props {
+  active?: 'home' | 'shop' | 'story' | 'stockists' | 'journal' | 'contact';
+}
+const { active = 'home' } = Astro.props;
+const links = [
+  { href: '/',           label: 'Home',      key: 'home' },
+  { href: '/shop',       label: 'Shop',      key: 'shop' },
+  { href: '/story',      label: 'Story',     key: 'story' },
+  { href: '/stockists',  label: 'Stockists', key: 'stockists' },
+  { href: '/journal',    label: 'Journal',   key: 'journal' },
+] as const;
+---
+
+<nav class="w-full bg-cream/90 backdrop-blur sticky top-0 z-50 border-b border-espresso/10">
+  <div class="flex justify-between items-center w-full px-8 md:px-12 h-20">
+    <a href="/" class="border border-espresso px-4 py-2 font-headline text-sm tracking-widest text-espresso hover:bg-espresso hover:text-cream transition-colors">
+      SPROD-KRAAKS
+    </a>
+    <div class="hidden md:flex gap-x-12 font-label text-label-caps uppercase tracking-widest">
+      {links.map(l => (
+        <a href={l.href} class={`transition-colors hover:text-copper ${l.key === active ? 'text-copper border-b border-copper pb-1' : 'text-espresso'}`}>
+          {l.label}
+        </a>
+      ))}
+    </div>
+    <div class="flex items-center gap-x-6 text-espresso">
+      <a href="#" aria-label="Region" class="hover:text-copper transition-colors">
+        <span class="material-symbols-outlined">language</span>
+      </a>
+      <a href="/contact" aria-label="Contact" class="flex items-center gap-x-2 hover:text-copper transition-colors">
+        <span class="material-symbols-outlined">mail</span>
+      </a>
+    </div>
+  </div>
+</nav>
