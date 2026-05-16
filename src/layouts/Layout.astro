@@ -35,8 +35,255 @@ const {
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
       rel="stylesheet"
     />
+
+    <script is:inline>
+      (() => {
+        try {
+          if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.documentElement.classList.add('motion-pre');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style is:global>
+      :root {
+        --m-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+        --m-dur: 900ms;
+        --m-dur-slow: 1400ms;
+      }
+
+      /* Pre-hide states — applied via motion-pre class to prevent FOUC */
+      html.motion-pre main > section,
+      html.motion-pre main main > section {
+        opacity: 0;
+        transform: translateY(24px);
+        will-change: opacity, transform;
+        transition:
+          opacity var(--m-dur) var(--m-ease),
+          transform var(--m-dur) var(--m-ease);
+      }
+      html.motion-pre main h1.font-display-lg,
+      html.motion-pre main h1.font-display-md,
+      html.motion-pre main h2.font-display-lg,
+      html.motion-pre main h2.font-display-md,
+      html.motion-pre main h1.font-headline,
+      html.motion-pre main h2.font-headline {
+        opacity: 0;
+        transform: translateY(16px);
+        transition:
+          opacity var(--m-dur) var(--m-ease) 100ms,
+          transform var(--m-dur) var(--m-ease) 100ms;
+      }
+      html.motion-pre .m-word {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(0.5em);
+        will-change: transform, opacity;
+        transition:
+          opacity var(--m-dur) var(--m-ease),
+          transform var(--m-dur) var(--m-ease);
+      }
+      html.motion-pre .m-stagger-item {
+        opacity: 0;
+        transform: translateY(12px);
+        transition:
+          opacity var(--m-dur) var(--m-ease),
+          transform var(--m-dur) var(--m-ease);
+      }
+      html.motion-pre .hairline-b,
+      html.motion-pre .hairline-l,
+      html.motion-pre .hairline-t,
+      html.motion-pre .hairline-r {
+        opacity: 0;
+        transition: opacity var(--m-dur-slow) var(--m-ease);
+      }
+      html.motion-pre main > section:first-of-type img.absolute {
+        transform: scale(1.06);
+        transform-origin: center;
+        will-change: transform;
+      }
+
+      /* Revealed states — JS toggles the .m-revealed class */
+      html.motion-pre main > section.m-revealed,
+      html.motion-pre main main > section.m-revealed {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      html.motion-pre main h1.m-revealed,
+      html.motion-pre main h2.m-revealed,
+      html.motion-pre main .m-headline.m-revealed {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* A revealed stagger group cascades to its children via wrapping rule */
+      html.motion-pre .m-stagger.m-revealed > .m-stagger-item {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* Headlines whose words were split: reveal each word with stagger */
+      html.motion-pre .m-headline.m-revealed .m-word {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      html.motion-pre .m-headline.m-revealed .m-word:nth-child(1) { transition-delay: 0.05s; }
+      html.motion-pre .m-headline.m-revealed .m-word:nth-child(2) { transition-delay: 0.10s; }
+      html.motion-pre .m-headline.m-revealed .m-word:nth-child(3) { transition-delay: 0.15s; }
+      html.motion-pre .m-headline.m-revealed .m-word:nth-child(4) { transition-delay: 0.20s; }
+      html.motion-pre .m-headline.m-revealed .m-word:nth-child(5) { transition-delay: 0.25s; }
+      html.motion-pre .m-headline.m-revealed .m-word:nth-child(6) { transition-delay: 0.30s; }
+      html.motion-pre .m-headline.m-revealed .m-word:nth-child(7) { transition-delay: 0.35s; }
+      html.motion-pre .m-headline.m-revealed .m-word:nth-child(8) { transition-delay: 0.40s; }
+      html.motion-pre .m-headline.m-revealed .m-word:nth-child(n+9) { transition-delay: 0.45s; }
+
+      html.motion-pre .m-hairline.m-revealed {
+        opacity: 1;
+      }
+
+      /* ──────────────────────────────────────────────────────────────────
+       * STUNNING LAYER
+       * ────────────────────────────────────────────────────────────────── */
+
+      /* Character split — chars start hidden, lift in with cascade */
+      html.motion-pre .m-char {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(0.55em) rotate(2deg);
+        transform-origin: 50% 100%;
+        will-change: transform, opacity;
+        transition:
+          opacity 700ms var(--m-ease),
+          transform 900ms var(--m-ease);
+      }
+      html.motion-pre .m-headline.m-revealed .m-char {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+      }
+      /* Cascade up to ~60 chars, in 20ms steps. Beyond that, snap. */
+      html.motion-pre .m-headline.m-revealed .m-char:nth-child(1) { transition-delay: 0.02s; }
+      html.motion-pre .m-headline.m-revealed .m-char:nth-child(2) { transition-delay: 0.04s; }
+      html.motion-pre .m-headline.m-revealed .m-char:nth-child(3) { transition-delay: 0.06s; }
+      html.motion-pre .m-headline.m-revealed .m-char:nth-child(4) { transition-delay: 0.08s; }
+      html.motion-pre .m-headline.m-revealed .m-char:nth-child(5) { transition-delay: 0.10s; }
+      html.motion-pre .m-headline.m-revealed .m-char:nth-child(6) { transition-delay: 0.12s; }
+      html.motion-pre .m-headline.m-revealed .m-char:nth-child(7) { transition-delay: 0.14s; }
+      html.motion-pre .m-headline.m-revealed .m-char:nth-child(8) { transition-delay: 0.16s; }
+      html.motion-pre .m-headline.m-revealed .m-char:nth-child(9) { transition-delay: 0.18s; }
+      html.motion-pre .m-headline.m-revealed .m-char:nth-child(10) { transition-delay: 0.20s; }
+      html.motion-pre .m-headline.m-revealed .m-char:nth-child(n+11) { transition-delay: 0.22s; }
+      html.motion-pre .m-headline.m-revealed .m-word-wrap:nth-of-type(2) .m-char { transition-delay: 0.28s; }
+      html.motion-pre .m-headline.m-revealed .m-word-wrap:nth-of-type(3) .m-char { transition-delay: 0.38s; }
+      html.motion-pre .m-headline.m-revealed .m-word-wrap:nth-of-type(4) .m-char { transition-delay: 0.48s; }
+      html.motion-pre .m-headline.m-revealed .m-word-wrap:nth-of-type(5) .m-char { transition-delay: 0.58s; }
+
+      /* Top scroll progress copper line */
+      .m-scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #A8763E 30%, #A8763E 70%, transparent);
+        transform: scaleX(0);
+        transform-origin: 0 0;
+        z-index: 100;
+        pointer-events: none;
+        mix-blend-mode: multiply;
+      }
+
+      /* Clip-path curtain reveal for full-width imagery */
+      html.motion-pre .m-clip-wrap {
+        position: relative;
+      }
+      html.motion-pre .m-clip-wrap > .m-clip-image {
+        clip-path: inset(0 0 100% 0);
+        transform: scale(1.08);
+        transform-origin: center;
+        transition:
+          clip-path 1400ms cubic-bezier(0.7, 0, 0.2, 1),
+          transform 1800ms var(--m-ease);
+      }
+      html.motion-pre .m-clip-wrap.m-revealed > .m-clip-image {
+        clip-path: inset(0 0 0 0);
+        transform: scale(1);
+      }
+
+      /* Marquee — slow continuous horizontal scroll */
+      .m-marquee-host { overflow: hidden; }
+      .m-marquee {
+        overflow: hidden;
+        width: 100%;
+        mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+        -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+      }
+      .m-marquee-track {
+        display: inline-flex;
+        align-items: center;
+        gap: 3rem;
+        white-space: nowrap;
+        animation: m-marquee-scroll var(--m-marquee-duration, 40s) linear infinite;
+        will-change: transform;
+      }
+      .m-marquee-track > * { flex-shrink: 0; }
+      .m-marquee-host:hover .m-marquee-track { animation-play-state: paused; }
+      @keyframes m-marquee-scroll {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+      }
+
+      /* Cursor-aware copper spotlight on the hero */
+      .m-spotlight {
+        position: relative;
+        --spot-x: 50%;
+        --spot-y: 50%;
+        --spot-opacity: 0;
+      }
+      .m-spotlight::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(
+          400px circle at var(--spot-x) var(--spot-y),
+          rgba(168, 118, 62, 0.18),
+          transparent 60%
+        );
+        opacity: var(--spot-opacity);
+        transition: opacity 600ms var(--m-ease);
+        mix-blend-mode: soft-light;
+        z-index: 5;
+      }
+
+      /* Magnetic CTA — slight underline grow + copper bias */
+      .m-magnetic {
+        position: relative;
+        transition: color 0.4s var(--m-ease);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html .m-word,
+        html .m-char,
+        html .m-stagger-item,
+        html main > section,
+        html main main > section,
+        html main h1,
+        html main h2,
+        html .m-headline,
+        html .m-hairline,
+        html .m-clip-image {
+          opacity: 1 !important;
+          transform: none !important;
+          transition: none !important;
+          clip-path: none !important;
+        }
+        html .m-marquee-track { animation: none !important; }
+        html .m-scroll-progress { display: none !important; }
+      }
+    </style>
   </head>
   <body class="bg-cream text-espresso font-body antialiased grain">
     <slot />
+    <script>
+      import "../scripts/motion.ts";
+    </script>
   </body>
 </html>
