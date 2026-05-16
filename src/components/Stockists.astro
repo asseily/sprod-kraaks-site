@@ -11,7 +11,10 @@ const stockists = ['SPINNEYS', 'WAITROSE', 'CARREFOUR', 'ECO MARKET', 'GOURMINI'
       </a>
     </div>
     <div class="border-t border-espresso/15"></div>
-    <div class="flex flex-wrap gap-x-12 gap-y-6 items-center font-headline text-headline-md text-espresso">
+    <div
+      data-marquee="stockists"
+      class="flex flex-wrap gap-x-12 gap-y-6 items-center font-headline text-headline-md text-espresso"
+    >
       {stockists.map((s, i) => (
         <>
           <span>{s}</span>
